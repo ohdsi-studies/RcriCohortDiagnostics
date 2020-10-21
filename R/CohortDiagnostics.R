@@ -110,6 +110,7 @@ runCohortDiagnostics <- function(packageName = "examplePackage",
                                             inclusionStatisticsFolder = file.path(outputFolder,
                                                                                   "inclusionStatisticsFolder"),
                                             createCohortTable = TRUE, 
+                                            incremental = incremental,
                                             incrementalFolder = incrementalFolder)
     DatabaseConnector::disconnect(connection)
   }
@@ -121,7 +122,8 @@ runCohortDiagnostics <- function(packageName = "examplePackage",
                                           oracleTempSchema = oracleTempSchema,
                                           cohortDatabaseSchema = cohortDatabaseSchema,
                                           cohortTable = cohortTable,
-                                          inclusionStatisticsFolder = outputFolder,
+                                          inclusionStatisticsFolder = file.path(outputFolder,
+                                                                                "inclusionStatisticsFolder"),
                                           exportFolder = file.path(outputFolder,
                                                                    "diagnosticsExport"),
                                           databaseId = databaseId,
