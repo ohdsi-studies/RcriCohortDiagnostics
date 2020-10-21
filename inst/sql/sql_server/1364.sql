@@ -1,0 +1,1530 @@
+CREATE TABLE #Codesets (
+  codeset_id int NOT NULL,
+  concept_id bigint NOT NULL
+)
+;
+
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 0 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (9201)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (9201)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 1 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4135199,3363351,2107924,2107949,2107837,4283095,4240486,4142641,4234989)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4135199,3363351,2107924,2107949,2107837,4283095,4240486,4142641,4234989)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4135199,3363351,2107924,2107949,2107837,4283095,4240486,4142641,4234989)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4135199,3363351,2107924,2107949,2107837,4283095,4240486,4142641,4234989)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 2 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4236706)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4236706)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4236706)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4236706)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 3 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4336541,4144721,4228700,4146631,4146030,4146035,4290511,4146028,4069356,4017325,4168602,4123566,4013040,4033545,4069845,4193311,4201274,4314572,4141257,4144202,4123418,4125436,4166855,4068996,40488424,40490977,4197729,4233085,4207467,4198190,4174214,4172277,40487423,40487517,40493251,4123904,4101041,4018288,4017583,4017725,4018134,4018133,4066753,4140883,4128855,4141243,4204214,4230350,4173432,4146015,4282553,4047386,4287937,4161522,4069348,4145145,4131440,4029794,46272750,4035460,4189182,4195720,4135441,4145224,4085962,4227266,4288746,4063558,4131793,4128858,4067346,4227434,4172800,4167979,4248145,4332008,4255046,44811442,40487953,4229918,4117743,4139152,4170609,4136780,40487515,40486515,40491959,40493440,4209537,36712675,46271320,40488297,4123906,4264318,4283680,4028332,4162987,4241048,4234897,40480623,36674359,35609784,4306061,4130558,4306060,4172158,4103646,4113224,4286350,4238106,4160163,4136781,4297514,4128729,4146637,4197216,4327632,4123410,4027523,4302546,4216505,4265757,4295431,4321873,4123409,4200223,4173725,4285576,4149739,4049387,4033674,4263640,4216655,4233578,4148467,4335371,4143876,4143875,4139398,4143877,4123903,4249460,4017585,4221397,4243665,4283357,4294397,4123910,4125298,4168531,4123413,4124305,4252245,4117617,4201279,4018012,4017594,4068042,4067331,4067329,44782862,4066858,4172452,40488925,43530761,4068043,4067333,4184501,4300528,4209155,40485936,40485345,40485980,43531698,4139156,4139157,4123407,4142249,4067236,4067332,43531480,43531479,44806292,506594,36674363,506592,4103380,35609785,36674358,4066761,4068989,37016984,37016859,4141198,4145371,43530764,40485970,40485972,4230238,4150688,4017592,4327813,4144935,4211860,4141227,4146476,4266210,4000607,4067688,4045403,4202223,4144206,4079713,4017599,4136782,4298165,4303290,4290265,4010354,4128715,4128716,4128714,4342537,4155084,37204027,4121239,4142987,4141228,40482705,4290887,4163526,4314569,4230220,4066641,4235570,36675227,4067932,4194372,4281511,4143174,40489329,4194744,4228336,40485422,40483733,4027552,40483732,40493295,4123406,4300501,4165586,40490505,40488438,40485319,4327818,4117188,4243775,4194589,4199792,40484127,4170227,4030690,4032108,4308819,4020327,4022438,4023552,4023553,4123402,4017464,4017602,44811323,4018274,4136779,4162238,4135177,4312203,4121238,4018132,4018138,4068037,4068277,36674306,4123907,4140293,4068275,4018295,4140920,507673,4080163,4173452,4141126,4139160,36714616,44808776,4275133,4013041,4022362,4221722,40486940,40491370,40486934,40486935,4042907,4294869,36712674,4201147,4066651,4066652,4068264,4068028,4146616,4125308,4078310,4182718,4218743,4173118,4068030,4031507,4179526,4138898,4145218,4144599,4145512,4145041,4220986,4291953,4284828,4307961,4266858,4227000,4168297,4061287,40487891,4183854,4195076,4177941,4172768,4142362,4022436,4144213,4068417,4124301,4151641,4017462,4251920,40488450,4147307,4128727,4026352,4319281,4135346,4232489,44807938,44807939,4243973,43531108,43531107,4017461,40481893,46270674,44807787,44807788,44809645,44807783,4209077,4257890,44807929,44807933,4141242,44809616,44809617,44807930,44807934,37016852,44807813,44807814,37204026,44809642,44809643,44807797,44807798,44807802,44807803,44807806,37312780,37312778,37312779,44807809,37016994,4141244,44807795,37203798,35610616,35610614,37203797,35610615,37203799,37310724,4262797,4235749,4069714,4187629,46270677,4179797,4030387,44807786,44809644,44807925,44807784,44807812,44807801,44807805,44807794,4002067,4029565,4002558,4123408,4125301,4219780,4144204,4018281,44811437,4017469,4199952,4197728,4318673,4183332,46273729,4121233,4322181,4151121,40489970,40487521,4199456,4128728,4166273,4125300,4296174,4022910,44809737,4185246,4250795,4249158,4262826,4128726,44807937,4231898,4249160,4017591,4068999,4068412,4150782,4068147,44807785,44813904,4139159,44807924,4068413,44809615,44807936,4128854,44807811,4017729,4018291,4018292,4017587,4018294,44809619,44807796,44807800,44807804,44807793,4312749,4036692,4221694,4192247,4286502,4214990,4068415,4165549,4123404,4123405,4020329,4144849,4139996,44807810,4122647,4137288,4028033,4195151,4221568,4229775,4259115,4326904,4249151,4070858,4071649,42872490,4098879,4144719,4184913,40492756,4124303,4075872,4019076,4066414,4067917,4181781,42539745,4273758,37312737,4224344,4142371,4168990,4144723,4166293,4146620,4327868,4069010,4176100,4066875,44805432,4030058,4224467,4184588,4123398,4128864,4142370,4163366,4123417,4068146,4187917,4097307,4128890,4010018,4250893,4104637,4245100,4069104,4069103,4067351,4329865,4172146,4230237,4022013,4020330,4117192,4185981,4067445,4166761,4347169,4181584,4069008,4144720,4120064,4002561,4002563,4001368,4018289,4141005,4269086,4012316,4123412,4066011,4240244,4319900,4077844,4230535,4279790,4070809,4277940,4045946,4135711,40479990,4146167,4147611,4012315,4128866,4070766,4177704,4026223,4252402,4134717,4167524,4202217,4125303,4275570,4250788,4084297,4311017,4077946,4085858,4184775,4263633,4233818,4029972,4200416,4284692,4289144,4052959,4057407,4221999,44810474,4233416,4225750,4264149,44789789,4135442,4226983,4216867,4183556,4203139,4144799,4168926,4341383,4125036,4187786,4171364,4263259,4233412,42538033,4199951,4018022,44811330,40487481,4018279,4172220,4147820,46270917,46270922,46270883,46270687,37310741,4208945,4309197,4053102,4225427,4017608,4146634,44814047,4018283,4146633,4202562,4202563,4125624,4024683,4295434,40489454,40493203,40490501,40486141,40489330,4199605,4198242,4104535,4254257,4030148,4125160,4199870,4200964,4200965,4168529,4122805,4139161,4234933,4146034,37310744,4144205,4146036,42872470,44790503,42872471,4179807,4167268,4166923,4211701,4141143,4265898,4012314,4301002,4326580,4245390,4296082,43021552,40491978,4128861,4218295,4297515,4127736,4262950,4163975,4260388,4149741,4197412,4096461,4145225,4141259,4146636,4071281,4070481,4236032,4120065,4292716,4022012,4066413,4066412,4066411,4194416,4286807,4128860,4279125,40482769,4334487,4152086,4067784,4227299,4140215,4052551,4299045,4217180,4069006,4067341,4069005,4097958,4017466,4144203,44811428,4018024,4146632,4201948,4202561,4261365,4123900,4128091,4059252,4063559,4235644,4212113,44783696,37310731,4299772,40493194,4142326)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4144721,4125436,4166855,4068996,4197729,4233085,4207467,4198190,4174214,4141243,40487953,4170609,40486515,4209537,40488297,4123910,4018012,4103380,4327813,4079713,4017599,4303290,40482705,4290887,4235570,4067932,4194372,4143174,40485422,40483733,4027552,4123406,4123402,4017464,4017602,4018274,4136779,4018295,4080163,40486935,4042907,4078310,4220986,40487891,4017462,4243973,4017461,40481893,4141242,44809616,37016852,44809642,44807797,4141244,4069714,4187629,4179797,4030387,4029565,4219780,4144204,4017469,4199952,4151121,40489970,4296174,44807804,4165549,4122647,4137288,4195151,4221568,4259115,4249151,4098879,4181781,4144723,4163366,4068146,4250893,4166761,4181584,4233416,4225750,4226983,4233412,4199951,4018022,40487481,46270883,4225427,4017608,4146634,4018283,4202562,4199870,4168529,4234933,4146034,4144205,4146036,4262950,4163975,4260388,4149741,4197412,4096461,4145225,4128860,4152086,4217180,4097958,4144203)
+  and c.invalid_reason is null
+
+) I
+LEFT JOIN
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4035031,4195115,4126235,4062763)
+
+) E ON I.concept_id = E.concept_id
+WHERE E.concept_id is null
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 4 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4050715,2729936,2730222,2733408,2730202,2729976,2730449,2729956,2730429,2730182,2730469,2731672,2731959,2731467,2731939,2731712,2732187,2731692,2732167,2731919,2732207,2730725,2731198,2730705,2731178,2730952,2731427,2730932,2731218,2730972,2731447,2107930,2107875,42872694,4204987,4050130,40491012,4332920,4204137)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4050715,2729936,2730222,2733408,2730202,2729976,2730449,2729956,2730429,2730182,2730469,2731672,2731959,2731467,2731939,2731712,2732187,2731692,2732167,2731919,2732207,2730725,2731198,2730705,2731178,2730952,2731427,2730932,2731218,2730972,2731447,2107930,2107875,42872694,4204987,4050130,40491012,4332920,4204137)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4050715,2729936,2730222,2733408,2730202,2729976,2730449,2729956,2730429,2730182,2730469,2731672,2731959,2731467,2731939,2731712,2732187,2731692,2732167,2731919,2732207,2730725,2731198,2730705,2731178,2730952,2731427,2730932,2731218,2730972,2731447,2107930,2107875,42872694,4204987,4050130,40491012,4332920,4204137)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4050715,2729936,2730222,2733408,2730202,2729976,2730449,2729956,2730429,2730182,2730469,2731672,2731959,2731467,2731939,2731712,2732187,2731692,2732167,2731919,2732207,2730725,2731198,2730705,2731178,2730952,2731427,2730932,2731218,2730972,2731447,2107930,2107875,42872694,4204987,4050130,40491012,4332920,4204137)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 5 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4050131,4177489,42872696,4052109,40486124,4160988,4198464)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4050131,4177489,42872696,4052109,40486124,4160988,4198464)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4050131,4177489,42872696,4052109,40486124,4160988,4198464)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4050131,4177489,42872696,4052109,40486124,4160988,4198464)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 6 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (2107943,4169455,42539224,46273958,42535330,4188287,4179665,4144171)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (2107943,4169455,42539224,46273958,42535330,4188287,4179665,4144171)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (2107943,4169455,42539224,46273958,42535330,4188287,4179665,4144171)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (2107943,4169455,42539224,46273958,42535330,4188287,4179665,4144171)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 7 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4313138,2731688,2732163,2731668,2731955,2731915,2732203,2731708,2732183,2731935,2732412,2731687,2732162,2731667,2731954,2731914,2732202,2731707,2732182,2731934,2732411,2731686,2732161,2731666,2731953,2731913,2732201,2731706,2732181,2731933,2732410,2730928,2731214,2730721,2731194,2730968,2731443,2730948,2731423,2731174,2731463,2730927,2731213,2730720,2731193,2730967,2731442,2730947,2731422,2731173,2731462,2730926,2731212,2730719,2731192,2730966,2731441,2730946,2731421,2731172,2731461,2107968,2107886,2107885,2107903,4236707,4226967,4163331,4049679,4307198,4180074)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4313138,2731688,2732163,2731668,2731955,2731915,2732203,2731708,2732183,2731935,2732412,2731687,2732162,2731667,2731954,2731914,2732202,2731707,2732182,2731934,2732411,2731686,2732161,2731666,2731953,2731913,2732201,2731706,2732181,2731933,2732410,2730928,2731214,2730721,2731194,2730968,2731443,2730948,2731423,2731174,2731463,2730927,2731213,2730720,2731193,2730967,2731442,2730947,2731422,2731173,2731462,2730926,2731212,2730719,2731192,2730966,2731441,2730946,2731421,2731172,2731461,2107968,2107886,2107885,2107903,4236707,4226967,4163331,4049679,4307198,4180074)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4313138,2731688,2732163,2731668,2731955,2731915,2732203,2731708,2732183,2731935,2732412,2731687,2732162,2731667,2731954,2731914,2732202,2731707,2732182,2731934,2732411,2731686,2732161,2731666,2731953,2731913,2732201,2731706,2732181,2731933,2732410,2730928,2731214,2730721,2731194,2730968,2731443,2730948,2731423,2731174,2731463,2730927,2731213,2730720,2731193,2730967,2731442,2730947,2731422,2731173,2731462,2730926,2731212,2730719,2731192,2730966,2731441,2730946,2731421,2731172,2731461,2107968,2107886,2107885,2107903,4236707,4226967,4163331,4049679,4307198,4180074)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4313138,2731688,2732163,2731668,2731955,2731915,2732203,2731708,2732183,2731935,2732412,2731687,2732162,2731667,2731954,2731914,2732202,2731707,2732182,2731934,2732411,2731686,2732161,2731666,2731953,2731913,2732201,2731706,2732181,2731933,2732410,2730928,2731214,2730721,2731194,2730968,2731443,2730948,2731423,2731174,2731463,2730927,2731213,2730720,2731193,2730967,2731442,2730947,2731422,2731173,2731462,2730926,2731212,2730719,2731192,2730966,2731441,2730946,2731421,2731172,2731461,2107968,2107886,2107885,2107903,4236707,4226967,4163331,4049679,4307198,4180074)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 13 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4231680,4231681,4226966,4247783,4246870,4313138,2107950,2107951,2107963,2107881,2107887,40487995,40487553,40488455,4222123)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4231680,4231681,4226966,4247783,4246870,4313138,2107950,2107951,2107963,2107881,2107887,40487995,40487553,40488455,4222123)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4231680,4231681,4226966,4247783,4246870,4313138,2107950,2107951,2107963,2107881,2107887,40487995,40487553,40488455,4222123)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4231680,4231681,4226966,4247783,4246870,4313138,2107950,2107951,2107963,2107881,2107887,40487995,40487553,40488455,4222123)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 14 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4049675,4244434,915705,4052254,4049676)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4049675,4244434,915705,4052254,4049676)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4049675,4244434,915705,4052254,4049676)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4049675,4244434,915705,4052254,4049676)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 15 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (2108643,2108645,2768119,2830031,40756860,2103358,4077122,2103867,2740455,2756407,2760818,2740654,2756413,2740457,2756411)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (2108643,2108645,2768119,2830031,40756860,2103358,4077122,2103867,2740455,2756407,2760818,2740654,2756413,2740457,2756411)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 18 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4049675,3188936,3186130,4259553,46271672,45887730,4000088,44793144,4181152,4199966,2107112,2107101)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (3188936,3186130,4259553,46271672,4000088,44793144,4181152,4199966,2107112,2107101)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (3188936,3186130,4259553,46271672,4000088,44793144,4181152,4199966,2107112,2107101)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (3188936,3186130,4259553,46271672,4000088,44793144,4181152,4199966,2107112,2107101)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) I
+LEFT JOIN
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4272324,2107425,2107310)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4272324,2107425,2107310)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4272324,2107425,2107310)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4272324,2107425,2107310)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) E ON I.concept_id = E.concept_id
+WHERE E.concept_id is null
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 19 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4031312,40488302,4030825,4120657)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4031312,40488302,4030825,4120657)
+  and c.invalid_reason is null
+UNION
+select distinct cr.concept_id_1 as concept_id
+FROM
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4031312,40488302,4030825,4120657)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4031312,40488302,4030825,4120657)
+  and c.invalid_reason is null
+
+) C
+join @vocabulary_database_schema.concept_relationship cr on C.concept_id = cr.concept_id_2 and cr.relationship_id = 'Maps to' and cr.invalid_reason IS NULL
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 20 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4001562,4183741,4337034)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4001562,4183741,4337034)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 21 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4095787,4144927,4125151,4123752,4123258,4128704,4123754,4123753,4117076,4206240,44799351,4310408,4068214,4175018,40485933,43531558,40485971,40489317,4088171,4074215,4070855,4138691,40488819,4272615,4022904,4137388,4137228,4203442,4234134,4300428,4221722,4121242,4221665,4012942,4187106,4032564,4183329,4173511,4172219,46272798,40492763,44809029,37018695,4143852,46270977,40489820,40484108,4070869,4070870,4139996,4140874,4128564,40492756,4071537,4233414,4124303,4144928,4131656,4021544,4308113,4235310,4124304,4233982,4071550,4117075,4284969,4001100,4222325,46270688,507338,4322713,4227605,4124306,4121241,4174035,4131021,4070373,4070372,4071534,4231795,4239077,4120065,4234972)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4095787,4206240,4310408,4074215,4203442,4234134,4121242,4221665,4012942,4172219,4143852,4071537,4233414,4021544,4322713,4174035,4131021,4070373,4239077)
+  and c.invalid_reason is null
+
+) I
+LEFT JOIN
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4170280,334,239,408,250,384)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4170280)
+  and c.invalid_reason is null
+
+) E ON I.concept_id = E.concept_id
+WHERE E.concept_id is null
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 22 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4128883,4125322,4144850,4111590,4124042,4222733,4238930,4247169,4143166,4123584,4301125,4209155,43531475,4211860,4000607,4067688,4290265,4163526,4068985,4168628,4141241,4144801,4124049,4069345,4068389,4187901,4299926,44808479,4068390,4125323,4011698,4124311,4141456,4020329,4144849,4139996,4144185,4067888,4021082,4230237,4022013,4020330,4117192,4198981,4183556,4147469,4124310,4124041,4316068,4067886,4328359,4286807,4067784)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4141456)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 23 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4170280,4253787,4196342,4062074,4211101,4293016,43531557,40489309,40485925,4123741,4187533,4144935,4139547,4139548,4074215,4070855,37109505,4296537,4021559,36674305,4144313,4067095,4172219,4128563,37016845,4305958,4099026,4128562,4303577,4069165,4070365,4070858,4071282,4140874,4128564,4123737,4124531,40488475,42872490,4123738,4068662,40489464,4068152,4125148,4220195,4029954,4071281,4140875,4295728,4122235,40491890,40492896,4301112,4339290)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4187533)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 24 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4142436,4216250,4144195,4141662,46270085,45763716,42537389,44809602,761093,46270641,37399470,46270642,4030150,4099299,4312613,4035186,37017273,4067461,46270895,46273689,4069129)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4142436,4216250,4144195,4141662,46270085,42537389,44809602,761093,46270641,37399470,46270642,4030150,4099299,4312613,4035186,37017273,4067461,46270895,46273689,4069129)
+  and c.invalid_reason is null
+
+) I
+LEFT JOIN
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4021529,40486551,4200678,4200677,4027862,4136758,4071520,4144721,40479234,4137462,4035031,4300370,4195115,4194125,4315014,4097233,4242216,4274501,4123415,4227015,4117073,4319131,4300889,4125436,4166855,4068996,4197729,4233085,4207467,4198190,4174214,4066293,2109327,2109328,4170280,4114630,4093429,4125770,4297990,4117213,4107080,4066522,4092675,4095787,4144927,4029571,4141243,4138737,4262531,4003896,4165077,4242997,4121165,4342516,4261768,4247263,4123422,4002178,4213044,40487953,4170609,40486515,4209537,40488297,4270496,4249726,4189196,4338661,4206240,4181912,4121094,4124170,4119924,4299730,4310737,4124042,4310408,4222733,4247169,4283357,2109319,2109323,2109324,2109325,4193124,4123910,4123584,4124305,4252245,4018012,4130320,4032738,4172203,4202382,4140707,4127099,4103380,4193061,4327813,4074215,4211860,2734505,2734504,2734507,2734506,2734509,2734508,4266210,4122783,4001894,4194745,4067440,4066882,4126235,4217842,4079713,4017599,4271058,4212780,4090043,4302672,4218096,4270654,4303290,4010354,4128715,4074426,4028869,4240717,4187092,40493226,4311267,4183466,4066807,4120960,40482705,4305331,40487106,4290887,37111500,4253069,4304998,4171194,4264661,4230220,4264365,4066641,4288997,4235570,4273524,4262433,4067932,4194372,4283229,4138691,4044382,4221619,4143174,4116736,36717546,4144801,40485422,40483733,4027552,4122784,4067439,4235015,4062763,4072716,4123406,4269750,37111501,35623141,4074427,4093937,4150691,4067352,4301054,4071756,4127103,4272615,4030689,4172618,4031301,4074831,4031344,4130184,4266537,4216191,4210608,4265676,4048257,4020333,4234297,4125321,4123402,4141254,4017464,4017602,4018274,4136779,4142327,4001541,4018295,4100257,4218942,4080163,4203442,4234134,4300428,4221722,40486935,4042907,4221665,4012942,4177823,4074077,4270222,4247012,4251035,3169568,44783041,4248130,4127886,4118724,40489792,40492299,4221874,4205268,4201147,4078310,4220986,4219511,40487891,40484975,4330851,4017462,4172219,4319281,4117052,4027426,4177376,4243973,43531106,43531553,43531512,43531552,44782867,4163971,4048459,4283832,44808479,4017461,43531189,43531190,42872572,40481893,37017002,40489848,42872571,3178004,4127887,4141242,44809616,43531184,43531187,37016852,42872568,4207611,40490399,42872496,4206400,40487820,4032735,4258410,44809642,43531186,43531665,43530775,4201639,40488381,44807797,4143852,42872508,4032622,4190526,4130185,40487349,4195648,4141244,4265032,4270068,40480237,4069714,4187629,4179797,4030387,4294805,40480864,4147839,4171198,4029565,4074288,4074291,4219780,4144204,4017469,4199952,4197173,4114635,4074877,4074876,4073150,46270669,4150552,4074137,4046830,4151121,40489970,4019663,4296174,4250795,4270626,4158858,4129342,4176648,4022807,4300662,4306298,4118715,4142969,4071665,4023292,4201030,44807804,4069132,4067285,4141456,4020329,4122647,4141142,4310968,4137288,4195151,4221568,4259115,4249151,4010266,4343015,4098879,4184913,4102528,4071537,4233414,4124303,4322818,4300373,4075872,4304536,4172358,4106090,4173415,4181781,4273758,4267567,4281839,4178606,4030412,4144723,4211496,4163366,4259267,4068146,4250893,4235738,4067888,4021544,4021082,4230237,4124304,4233982,4022013,4020330,4146777,4273866,4216658,4243049,4012321,4021530,4022014,4023416,4117192,4338373,4219099,4096783,4071666,4073695,4073008,4276520,4187904,4102465,4198981,4262130,4281388,4230780,4166761,4181584,4339303,4109237,4221709,4109784,4196199,4267428,4233416,4225750,4264149,4212477,4226983,4001100,4222325,4144799,42538967,40492912,40489891,4194172,4233412,4199951,4018022,40487481,44788740,4120985,4074424,4072837,46270883,46270836,46270931,46270921,46270884,46273705,4165566,4021363,4139758,4225427,4017608,4146634,4018283,4202562,4021273,4070700,37017572,4322713,4227605,4030148,4199870,4168529,4125482,4234933,4124306,4121241,4072416,4146034,4144205,4146036,4174035,4124310,4212360,4147673,4078386,4306070,4105608,42538160,4263480,4242804,4118714,4262950,4163975,4260388,4149741,4197412,4021531,4019096,4272254,4096461,4145225,40484990,40483688,4236032,4131021,4070373,4239077,4066035,4023403,42538161,4312859,42538162,42538181,40488851,4021108,4316068,4128860,4115223,4018300,4198854,4152086,4308495,4181291,4146256,4217180,4124166,4073700,4234536,4124169,4305077,4341891,4097958,4144203,4000738,4278238,4029570,4294825,4300374,4169931,303,4138738,42538817,4013493,4136878,4299781,4185055,4184653,4147073,4148976,4130188,4234429,4125765,4280658,4308420,4021542,4234972,4263350)
+
+) E ON I.concept_id = E.concept_id
+WHERE E.concept_id is null
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 25 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4120425)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4120425)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 26 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4337607,4339613,4000882,4337608,4337613,4100718,4172438)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4337607,4339613,4000882,4337608,4337613,4100718,4172438)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 27 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4321450,4144424,4343341,4090926,42536397,42536396,42539518,4220390,4166842)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4321450,4144424,4343341,4090926,42536397,42536396,42539518,4220390,4166842)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 28 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4315036,4002375,4211987,43531416)
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 29 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4338257)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4338257)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 30 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4195136)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4195136)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 31 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4021530)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4021530)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 32 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4127886)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4127886)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 33 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4096783)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4096783)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 34 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4234536)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4234536)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 35 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4078547)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4078547)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 36 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4335477,4335476,4070880,4339612,4337036,4070879,4337606,4000882,4231736,4230250,4328240,4042845,4234745)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4335477,4335476,4070880,4339612,4337036,4070879,4337606,4000882,4231736,4230250,4328240,4042845,4234745)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 38 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4312749)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4312749)
+  and c.invalid_reason is null
+
+) I
+LEFT JOIN
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4323208)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4323208)
+  and c.invalid_reason is null
+
+) E ON I.concept_id = E.concept_id
+WHERE E.concept_id is null
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 39 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4241198)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4241198)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 40 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4047234)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4047234)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 41 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4101626)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4101626)
+  and c.invalid_reason is null
+
+) I
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 42 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (38001216,38001215,38001217,38001213,38001212,38001214,38001219,38001218,38001220,2722214,2722215,2722216,4059308)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (38001216,38001215,38001217,38001213,38001212,38001214,38001219,38001218,38001220,2722214,2722215,2722216,4059308)
+  and c.invalid_reason is null
+
+) I
+LEFT JOIN
+(
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4179071)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4179071)
+  and c.invalid_reason is null
+
+) E ON I.concept_id = E.concept_id
+WHERE E.concept_id is null
+) C;
+INSERT INTO #Codesets (codeset_id, concept_id)
+SELECT 43 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (262,9203)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (262,9203)
+  and c.invalid_reason is null
+
+) I
+) C;
+
+
+with primary_events (event_id, person_id, start_date, end_date, op_start_date, op_end_date, visit_occurrence_id) as
+(
+-- Begin Primary Events
+select P.ordinal as event_id, P.person_id, P.start_date, P.end_date, op_start_date, op_end_date, cast(P.visit_occurrence_id as bigint) as visit_occurrence_id
+FROM
+(
+  select E.person_id, E.start_date, E.end_date,
+         row_number() OVER (PARTITION BY E.person_id ORDER BY E.sort_date ASC) ordinal,
+         OP.observation_period_start_date as op_start_date, OP.observation_period_end_date as op_end_date, cast(E.visit_occurrence_id as bigint) as visit_occurrence_id
+  FROM 
+  (
+  -- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 1))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 2))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 3))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 4))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 5))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 6))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 7))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 13))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 14))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 15))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 18))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 19))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 20))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 21))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 22))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 23))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 24))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 25))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 26))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 27))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 28))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 29))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 30))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 31))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 32))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 33))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 34))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 35))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 36))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 38))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 39))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 40))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 41))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+UNION ALL
+-- Begin Procedure Occurrence Criteria
+select C.person_id, C.procedure_occurrence_id as event_id, C.procedure_date as start_date, DATEADD(d,1,C.procedure_date) as END_DATE,
+       C.procedure_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.procedure_date as sort_date
+from 
+(
+  select po.* 
+  FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
+JOIN #Codesets codesets on ((po.procedure_concept_id = codesets.concept_id and codesets.codeset_id = 42))
+) C
+
+
+-- End Procedure Occurrence Criteria
+
+  ) E
+	JOIN @cdm_database_schema.observation_period OP on E.person_id = OP.person_id and E.start_date >=  OP.observation_period_start_date and E.start_date <= op.observation_period_end_date
+  WHERE DATEADD(day,365,OP.OBSERVATION_PERIOD_START_DATE) <= E.START_DATE AND DATEADD(day,0,E.START_DATE) <= OP.OBSERVATION_PERIOD_END_DATE
+) P
+WHERE P.ordinal = 1
+-- End Primary Events
+
+)
+SELECT event_id, person_id, start_date, end_date, op_start_date, op_end_date, visit_occurrence_id
+INTO #qualified_events
+FROM 
+(
+  select pe.event_id, pe.person_id, pe.start_date, pe.end_date, pe.op_start_date, pe.op_end_date, row_number() over (partition by pe.person_id order by pe.start_date ASC) as ordinal, cast(pe.visit_occurrence_id as bigint) as visit_occurrence_id
+  FROM primary_events pe
+  
+JOIN (
+-- Begin Criteria Group
+select 0 as index_id, person_id, event_id
+FROM
+(
+  select E.person_id, E.event_id 
+  FROM primary_events E
+  INNER JOIN
+  (
+    -- Begin Correlated Criteria
+SELECT 0 as index_id, p.person_id, p.event_id
+FROM primary_events P
+INNER JOIN
+(
+  -- Begin Visit Occurrence Criteria
+select C.person_id, C.visit_occurrence_id as event_id, C.visit_start_date as start_date, C.visit_end_date as end_date,
+       C.visit_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.visit_start_date as sort_date
+from 
+(
+  select vo.* 
+  FROM @cdm_database_schema.VISIT_OCCURRENCE vo
+JOIN #Codesets codesets on ((vo.visit_concept_id = codesets.concept_id and codesets.codeset_id = 0))
+) C
+
+
+-- End Visit Occurrence Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-1,P.START_DATE) AND A.START_DATE <= DATEADD(day,0,P.START_DATE) AND A.END_DATE >= DATEADD(day,1,P.START_DATE) AND A.END_DATE <= P.OP_END_DATE
+GROUP BY p.person_id, p.event_id
+HAVING COUNT(A.TARGET_CONCEPT_ID) >= 1
+-- End Correlated Criteria
+
+  ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
+  GROUP BY E.person_id, E.event_id
+  HAVING COUNT(index_id) = 1
+) G
+-- End Criteria Group
+) AC on AC.person_id = pe.person_id and AC.event_id = pe.event_id
+
+) QE
+WHERE QE.ordinal = 1
+;
+
+--- Inclusion Rule Inserts
+
+select 0 as inclusion_rule_id, person_id, event_id
+INTO #Inclusion_0
+FROM 
+(
+  select pe.person_id, pe.event_id
+  FROM #qualified_events pe
+  
+JOIN (
+-- Begin Criteria Group
+select 0 as index_id, person_id, event_id
+FROM
+(
+  select E.person_id, E.event_id 
+  FROM #qualified_events E
+  INNER JOIN
+  (
+    -- Begin Correlated Criteria
+SELECT 0 as index_id, p.person_id, p.event_id
+FROM #qualified_events P
+LEFT JOIN
+(
+  -- Begin Visit Occurrence Criteria
+select C.person_id, C.visit_occurrence_id as event_id, C.visit_start_date as start_date, C.visit_end_date as end_date,
+       C.visit_concept_id as TARGET_CONCEPT_ID, C.visit_occurrence_id,
+       C.visit_start_date as sort_date
+from 
+(
+  select vo.* 
+  FROM @cdm_database_schema.VISIT_OCCURRENCE vo
+JOIN #Codesets codesets on ((vo.visit_concept_id = codesets.concept_id and codesets.codeset_id = 43))
+) C
+
+
+-- End Visit Occurrence Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= DATEADD(day,-2,P.START_DATE) AND A.START_DATE <= DATEADD(day,0,P.START_DATE)
+GROUP BY p.person_id, p.event_id
+HAVING COUNT(A.TARGET_CONCEPT_ID) = 0
+-- End Correlated Criteria
+
+  ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
+  GROUP BY E.person_id, E.event_id
+  HAVING COUNT(index_id) = 1
+) G
+-- End Criteria Group
+) AC on AC.person_id = pe.person_id AND AC.event_id = pe.event_id
+) Results
+;
+
+SELECT inclusion_rule_id, person_id, event_id
+INTO #inclusion_events
+FROM (select inclusion_rule_id, person_id, event_id from #Inclusion_0) I;
+TRUNCATE TABLE #Inclusion_0;
+DROP TABLE #Inclusion_0;
+
+
+with cteIncludedEvents(event_id, person_id, start_date, end_date, op_start_date, op_end_date, ordinal) as
+(
+  SELECT event_id, person_id, start_date, end_date, op_start_date, op_end_date, row_number() over (partition by person_id order by start_date ASC) as ordinal
+  from
+  (
+    select Q.event_id, Q.person_id, Q.start_date, Q.end_date, Q.op_start_date, Q.op_end_date, SUM(coalesce(POWER(cast(2 as bigint), I.inclusion_rule_id), 0)) as inclusion_rule_mask
+    from #qualified_events Q
+    LEFT JOIN #inclusion_events I on I.person_id = Q.person_id and I.event_id = Q.event_id
+    GROUP BY Q.event_id, Q.person_id, Q.start_date, Q.end_date, Q.op_start_date, Q.op_end_date
+  ) MG -- matching groups
+
+  -- the matching group with all bits set ( POWER(2,# of inclusion rules) - 1 = inclusion_rule_mask
+  WHERE (MG.inclusion_rule_mask = POWER(cast(2 as bigint),1)-1)
+
+)
+select event_id, person_id, start_date, end_date, op_start_date, op_end_date
+into #included_events
+FROM cteIncludedEvents Results
+WHERE Results.ordinal = 1
+;
+
+-- date offset strategy
+
+select event_id, person_id, 
+  case when DATEADD(day,0,start_date) > start_date then DATEADD(day,0,start_date) else start_date end as end_date
+INTO #strategy_ends
+from #included_events;
+
+
+-- generate cohort periods into #final_cohort
+with cohort_ends (event_id, person_id, end_date) as
+(
+	-- cohort exit dates
+  -- End Date Strategy
+SELECT event_id, person_id, end_date from #strategy_ends
+
+),
+first_ends (person_id, start_date, end_date) as
+(
+	select F.person_id, F.start_date, F.end_date
+	FROM (
+	  select I.event_id, I.person_id, I.start_date, E.end_date, row_number() over (partition by I.person_id, I.event_id order by E.end_date) as ordinal 
+	  from #included_events I
+	  join cohort_ends E on I.event_id = E.event_id and I.person_id = E.person_id and E.end_date >= I.start_date
+	) F
+	WHERE F.ordinal = 1
+)
+select person_id, start_date, end_date
+INTO #cohort_rows
+from first_ends;
+
+with cteEndDates (person_id, end_date) AS -- the magic
+(	
+	SELECT
+		person_id
+		, DATEADD(day,-1 * 0, event_date)  as end_date
+	FROM
+	(
+		SELECT
+			person_id
+			, event_date
+			, event_type
+			, MAX(start_ordinal) OVER (PARTITION BY person_id ORDER BY event_date, event_type ROWS UNBOUNDED PRECEDING) AS start_ordinal 
+			, ROW_NUMBER() OVER (PARTITION BY person_id ORDER BY event_date, event_type) AS overall_ord
+		FROM
+		(
+			SELECT
+				person_id
+				, start_date AS event_date
+				, -1 AS event_type
+				, ROW_NUMBER() OVER (PARTITION BY person_id ORDER BY start_date) AS start_ordinal
+			FROM #cohort_rows
+		
+			UNION ALL
+		
+
+			SELECT
+				person_id
+				, DATEADD(day,0,end_date) as end_date
+				, 1 AS event_type
+				, NULL
+			FROM #cohort_rows
+		) RAWDATA
+	) e
+	WHERE (2 * e.start_ordinal) - e.overall_ord = 0
+),
+cteEnds (person_id, start_date, end_date) AS
+(
+	SELECT
+		 c.person_id
+		, c.start_date
+		, MIN(e.end_date) AS end_date
+	FROM #cohort_rows c
+	JOIN cteEndDates e ON c.person_id = e.person_id AND e.end_date >= c.start_date
+	GROUP BY c.person_id, c.start_date
+)
+select person_id, min(start_date) as start_date, end_date
+into #final_cohort
+from cteEnds
+group by person_id, end_date
+;
+
+DELETE FROM @target_database_schema.@target_cohort_table where cohort_definition_id = @target_cohort_id;
+INSERT INTO @target_database_schema.@target_cohort_table (cohort_definition_id, subject_id, cohort_start_date, cohort_end_date)
+select @target_cohort_id as cohort_definition_id, person_id, start_date, end_date 
+FROM #final_cohort CO
+;
+
+
+-- Find the event that is the 'best match' per person.  
+-- the 'best match' is defined as the event that satisfies the most inclusion rules.
+-- ties are solved by choosing the event that matches the earliest inclusion rule, and then earliest.
+
+select q.person_id, q.event_id
+into #best_events
+from #qualified_events Q
+join (
+	SELECT R.person_id, R.event_id, ROW_NUMBER() OVER (PARTITION BY R.person_id ORDER BY R.rule_count DESC,R.min_rule_id ASC, R.start_date ASC) AS rank_value
+	FROM (
+		SELECT Q.person_id, Q.event_id, COALESCE(COUNT(DISTINCT I.inclusion_rule_id), 0) AS rule_count, COALESCE(MIN(I.inclusion_rule_id), 0) AS min_rule_id, Q.start_date
+		FROM #qualified_events Q
+		LEFT JOIN #inclusion_events I ON q.person_id = i.person_id AND q.event_id = i.event_id
+		GROUP BY Q.person_id, Q.event_id, Q.start_date
+	) R
+) ranked on Q.person_id = ranked.person_id and Q.event_id = ranked.event_id
+WHERE ranked.rank_value = 1
+;
+
+-- modes of generation: (the same tables store the results for the different modes, identified by the mode_id column)
+-- 0: all events
+-- 1: best event
+
+
+-- BEGIN: Inclusion Impact Analysis - event
+-- calculte matching group counts
+delete from @results_database_schema.cohort_inclusion_result where cohort_definition_id = @target_cohort_id and mode_id = 0;
+insert into @results_database_schema.cohort_inclusion_result (cohort_definition_id, inclusion_rule_mask, person_count, mode_id)
+select @target_cohort_id as cohort_definition_id, inclusion_rule_mask, count_big(*) as person_count, 0 as mode_id
+from
+(
+  select Q.person_id, Q.event_id, CAST(SUM(coalesce(POWER(cast(2 as bigint), I.inclusion_rule_id), 0)) AS bigint) as inclusion_rule_mask
+  from #qualified_events Q
+  LEFT JOIN #inclusion_events I on q.person_id = i.person_id and q.event_id = i.event_id
+  GROUP BY Q.person_id, Q.event_id
+) MG -- matching groups
+group by inclusion_rule_mask
+;
+
+-- calculate gain counts 
+delete from @results_database_schema.cohort_inclusion_stats where cohort_definition_id = @target_cohort_id and mode_id = 0;
+insert into @results_database_schema.cohort_inclusion_stats (cohort_definition_id, rule_sequence, person_count, gain_count, person_total, mode_id)
+select ir.cohort_definition_id, ir.rule_sequence, coalesce(T.person_count, 0) as person_count, coalesce(SR.person_count, 0) gain_count, EventTotal.total, 0 as mode_id
+from @results_database_schema.cohort_inclusion ir
+left join
+(
+  select i.inclusion_rule_id, count_big(i.event_id) as person_count
+  from #qualified_events Q
+  JOIN #inclusion_events i on Q.person_id = I.person_id and Q.event_id = i.event_id
+  group by i.inclusion_rule_id
+) T on ir.rule_sequence = T.inclusion_rule_id
+CROSS JOIN (select count(*) as total_rules from @results_database_schema.cohort_inclusion where cohort_definition_id = @target_cohort_id) RuleTotal
+CROSS JOIN (select count_big(event_id) as total from #qualified_events) EventTotal
+LEFT JOIN @results_database_schema.cohort_inclusion_result SR on SR.mode_id = 0 AND SR.cohort_definition_id = @target_cohort_id AND (POWER(cast(2 as bigint),RuleTotal.total_rules) - POWER(cast(2 as bigint),ir.rule_sequence) - 1) = SR.inclusion_rule_mask -- POWER(2,rule count) - POWER(2,rule sequence) - 1 is the mask for 'all except this rule' 
+WHERE ir.cohort_definition_id = @target_cohort_id
+;
+
+-- calculate totals
+delete from @results_database_schema.cohort_summary_stats where cohort_definition_id = @target_cohort_id and mode_id = 0;
+insert into @results_database_schema.cohort_summary_stats (cohort_definition_id, base_count, final_count, mode_id)
+select @target_cohort_id as cohort_definition_id, PC.total as person_count, coalesce(FC.total, 0) as final_count, 0 as mode_id
+FROM
+(select count_big(event_id) as total from #qualified_events) PC,
+(select sum(sr.person_count) as total
+  from @results_database_schema.cohort_inclusion_result sr
+  CROSS JOIN (select count(*) as total_rules from @results_database_schema.cohort_inclusion where cohort_definition_id = @target_cohort_id) RuleTotal
+  where sr.mode_id = 0 and sr.cohort_definition_id = @target_cohort_id and sr.inclusion_rule_mask = POWER(cast(2 as bigint),RuleTotal.total_rules)-1
+) FC
+;
+
+-- END: Inclusion Impact Analysis - event
+
+-- BEGIN: Inclusion Impact Analysis - person
+-- calculte matching group counts
+delete from @results_database_schema.cohort_inclusion_result where cohort_definition_id = @target_cohort_id and mode_id = 1;
+insert into @results_database_schema.cohort_inclusion_result (cohort_definition_id, inclusion_rule_mask, person_count, mode_id)
+select @target_cohort_id as cohort_definition_id, inclusion_rule_mask, count_big(*) as person_count, 1 as mode_id
+from
+(
+  select Q.person_id, Q.event_id, CAST(SUM(coalesce(POWER(cast(2 as bigint), I.inclusion_rule_id), 0)) AS bigint) as inclusion_rule_mask
+  from #best_events Q
+  LEFT JOIN #inclusion_events I on q.person_id = i.person_id and q.event_id = i.event_id
+  GROUP BY Q.person_id, Q.event_id
+) MG -- matching groups
+group by inclusion_rule_mask
+;
+
+-- calculate gain counts 
+delete from @results_database_schema.cohort_inclusion_stats where cohort_definition_id = @target_cohort_id and mode_id = 1;
+insert into @results_database_schema.cohort_inclusion_stats (cohort_definition_id, rule_sequence, person_count, gain_count, person_total, mode_id)
+select ir.cohort_definition_id, ir.rule_sequence, coalesce(T.person_count, 0) as person_count, coalesce(SR.person_count, 0) gain_count, EventTotal.total, 1 as mode_id
+from @results_database_schema.cohort_inclusion ir
+left join
+(
+  select i.inclusion_rule_id, count_big(i.event_id) as person_count
+  from #best_events Q
+  JOIN #inclusion_events i on Q.person_id = I.person_id and Q.event_id = i.event_id
+  group by i.inclusion_rule_id
+) T on ir.rule_sequence = T.inclusion_rule_id
+CROSS JOIN (select count(*) as total_rules from @results_database_schema.cohort_inclusion where cohort_definition_id = @target_cohort_id) RuleTotal
+CROSS JOIN (select count_big(event_id) as total from #best_events) EventTotal
+LEFT JOIN @results_database_schema.cohort_inclusion_result SR on SR.mode_id = 1 AND SR.cohort_definition_id = @target_cohort_id AND (POWER(cast(2 as bigint),RuleTotal.total_rules) - POWER(cast(2 as bigint),ir.rule_sequence) - 1) = SR.inclusion_rule_mask -- POWER(2,rule count) - POWER(2,rule sequence) - 1 is the mask for 'all except this rule' 
+WHERE ir.cohort_definition_id = @target_cohort_id
+;
+
+-- calculate totals
+delete from @results_database_schema.cohort_summary_stats where cohort_definition_id = @target_cohort_id and mode_id = 1;
+insert into @results_database_schema.cohort_summary_stats (cohort_definition_id, base_count, final_count, mode_id)
+select @target_cohort_id as cohort_definition_id, PC.total as person_count, coalesce(FC.total, 0) as final_count, 1 as mode_id
+FROM
+(select count_big(event_id) as total from #best_events) PC,
+(select sum(sr.person_count) as total
+  from @results_database_schema.cohort_inclusion_result sr
+  CROSS JOIN (select count(*) as total_rules from @results_database_schema.cohort_inclusion where cohort_definition_id = @target_cohort_id) RuleTotal
+  where sr.mode_id = 1 and sr.cohort_definition_id = @target_cohort_id and sr.inclusion_rule_mask = POWER(cast(2 as bigint),RuleTotal.total_rules)-1
+) FC
+;
+
+-- END: Inclusion Impact Analysis - person
+
+-- BEGIN: Censored Stats
+
+-- END: Censored Stats
+
+TRUNCATE TABLE #best_events;
+DROP TABLE #best_events;
+
+
+
+TRUNCATE TABLE #strategy_ends;
+DROP TABLE #strategy_ends;
+
+
+TRUNCATE TABLE #cohort_rows;
+DROP TABLE #cohort_rows;
+
+TRUNCATE TABLE #final_cohort;
+DROP TABLE #final_cohort;
+
+TRUNCATE TABLE #inclusion_events;
+DROP TABLE #inclusion_events;
+
+TRUNCATE TABLE #qualified_events;
+DROP TABLE #qualified_events;
+
+TRUNCATE TABLE #included_events;
+DROP TABLE #included_events;
+
+TRUNCATE TABLE #Codesets;
+DROP TABLE #Codesets;
