@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-packageName <- "Ohdsi2020StudyathonCohortDiagnosticsRCRI"
+packageName <- "RcriCohortDiagnostics"
 
 # Format and check code ---------------------------------------------------
 # OhdsiRTools::formatRFolder()
@@ -30,8 +30,8 @@ library(magrittr)
 
 allCohorts <- ROhdsiWebApi::getCohortDefinitionsMetaData(baseUrl = baseUrl)
 
-cohortsInOhdsi2020StudyAthonDescription <- allCohorts %>% 
-  dplyr::filter(id %in% c(1364)) %>%
+RcriCohortDiagnostics <- allCohorts %>% 
+  dplyr::filter(id %in% c(1364,1367,1320)) %>%
   dplyr::select(.data$id, .data$name, .data$description) %>% dplyr::mutate(phenotypeId = 0,
                                                                            webApiCohortId = id,
                                                                            atlasId = id,
@@ -46,7 +46,7 @@ cohortsInOhdsi2020StudyAthonDescription <- allCohorts %>%
                                                                                                             .data$logicDescription,
                                                                                                             .data$cohortId)
 
-readr::write_excel_csv(x = cohortsInOhdsi2020StudyAthonDescription,
+readr::write_excel_csv(x = RcriCohortDiagnostics,
                        file = "inst/settings/CohortsToCreate.csv",
                        na = "")
 

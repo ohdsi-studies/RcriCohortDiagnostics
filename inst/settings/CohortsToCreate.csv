@@ -1,2 +1,4 @@
 ﻿phenotypeId,webApiCohortId,atlasId,cohortName,name,logicDescription,cohortId
+0,1320,1320,[RCRI] Broad set of surgery procedures among patients who were inpatient during surgery and started the inpatient stay upto 7 days prior to surgery,1320,Patients aged >=45 undergoing non-emergent surgery (excluding cardiovascular surgery) as part of an inpatient visit,1320
 0,1364,1364,[RCRI] Composite surgery (combination of several major surgery) during inpatient stay,1364,,1364
+0,1367,1367,[RCRI] Composite surgery (combination of several major surgery) during inpatient stay (prior to design diagnostics),1367,,1367
