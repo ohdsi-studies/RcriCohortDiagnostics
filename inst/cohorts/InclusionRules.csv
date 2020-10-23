@@ -1,3 +1,8 @@
 cohortName,ruleSequence,ruleName,cohortId
-1364,0,No emergency room visit in the 48 hours prior,1364
+1364,0,Age above 45 years,1364
+1364,1,Inpatient visit on day of surgery without ER visit immediately on or prior,1364
+1364,2,Observation period of 365 days,1364
 1367,0,No emergency room visit in the 48 hours prior,1367
+1373,0,Age above 45 years,1373
+1373,1,Inpatient visit on day of surgery without ER visit immediately on or prior,1373
+1373,2,Observation period of 365 days,1373
