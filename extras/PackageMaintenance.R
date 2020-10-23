@@ -31,7 +31,10 @@ library(magrittr)
 allCohorts <- ROhdsiWebApi::getCohortDefinitionsMetaData(baseUrl = baseUrl)
 
 RcriCohortDiagnostics <- allCohorts %>% 
-  dplyr::filter(id %in% c(1373,1364,1367,1339, 1374,1290,1343, 1293, 1287, 1292, 1291, 1362)) %>%
+  dplyr::filter(id %in% c(1373,1364,1367,1339, 1374,1290,1343, 1293, 1287, 1292, 1291, 1362,
+                          1414,1415,1416,1417,1418,1419,1420,1421,1422,1423,1424,1425,1426,
+                          1427,1428,1429,1430,1431,1432,1433,1434,1435,1436,1437,1438,1439,
+                          1440,1441,1442,1443,1444,1445,1446,1447,1448)) %>%
   dplyr::select(.data$id, .data$name, .data$description) %>% dplyr::mutate(phenotypeId = 0,
                                                                            webApiCohortId = id,
                                                                            atlasId = id,
