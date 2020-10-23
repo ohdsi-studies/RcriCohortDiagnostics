@@ -11,4 +11,4 @@ cohortName,ruleSequence,ruleName,cohortId
 1374,0,Age above 45 years,1374
 1374,1,Inpatient visit on day of surgery without ER visit immediately on or prior,1374
 1374,2,Observation period of 365 days,1374
-1374,3,have a high risk surgery ,1374
+1374,3,Procedure Occurence of High Risk Surgery,1374

@@ -10,4 +10,4 @@
 0,1367,1367,[RCRI] Composite surgery 001 (combination of several major surgery) during inpatient stay (Prior to design diagnostics),1367,,1367
 0,1373,1373,[RCRI] Composite surgery 003 (combination of several major surgery) during inpatient stay (After 1 design diagnostics and 1 data diagnostics),1373,,1373
 0,1293,1293,[RCRI covariate] Ischemic heart disease,1293,,1293
-0,1374,1374,[RCRI] Non emergent Non Cardiac major surgery that is considered high risk (covariate),1374,,1374
+0,1374,1374,[RCRI] High Risk Surgery Covariate Cohort,1374,,1374
