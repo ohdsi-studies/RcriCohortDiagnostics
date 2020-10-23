@@ -3,11 +3,11 @@
 0,1290,1290,[RCRI] Periods of Elevated Creatinine (Covariate),1290,,1290
 0,1343,1343,[RCRI covariate] Periods of Elevated Creatinine or Renal Impairment,1343,,1343
 0,1291,1291,[RCRI Covariate] Periods of Insulin Treatment,1291,,1291
-0,1292,1292,[RCRI Covariate] RCRI covariate heart failure,1292,,1292
 0,1364,1364,"[RCRI] Composite surgery 002 (combination of several major surgery) during inpatient stay (After design diagnostics, pass to data diagnostics)",1364,,1364
-0,1367,1367,[RCRI] Composite surgery 001 (combination of several major surgery) during inpatient stay (Prior to design diagnostics),1367,,1367
-0,1373,1373,[RCRI] Composite surgery 003 (combination of several major surgery) during inpatient stay (After 1 design diagnostics and 1 data diagnostics),1373,,1373
+0,1292,1292,[RCRI Covariate] RCRI covariate heart failure,1292,,1292
 0,1287,1287,[RCRI] Covariate Cerebrovascular Disease,1287,,1287
 0,1362,1362,[PCE covariate] Type 2 diabetes mellitus,1362,,1362
-0,1374,1374,[RCRI] Non emergent Non Cardiac major surgery that is considered high risk (covariate),1374,,1374
+0,1367,1367,[RCRI] Composite surgery 001 (combination of several major surgery) during inpatient stay (Prior to design diagnostics),1367,,1367
+0,1373,1373,[RCRI] Composite surgery 003 (combination of several major surgery) during inpatient stay (After 1 design diagnostics and 1 data diagnostics),1373,,1373
 0,1293,1293,[RCRI covariate] Ischemic heart disease,1293,,1293
+0,1374,1374,[RCRI] Non emergent Non Cardiac major surgery that is considered high risk (covariate),1374,,1374
