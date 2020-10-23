@@ -1,4 +1,6 @@
 cohortName,ruleSequence,ruleName,cohortId
+1362,0,Has T2DM diagnosis,1362
+1362,1,No history of diabetes,1362
 1364,0,Age above 45 years,1364
 1364,1,Inpatient visit on day of surgery without ER visit immediately on or prior,1364
 1364,2,Observation period of 365 days,1364
@@ -6,3 +8,7 @@ cohortName,ruleSequence,ruleName,cohortId
 1373,0,Age above 45 years,1373
 1373,1,Inpatient visit on day of surgery without ER visit immediately on or prior,1373
 1373,2,Observation period of 365 days,1373
+1374,0,Age above 45 years,1374
+1374,1,Inpatient visit on day of surgery without ER visit immediately on or prior,1374
+1374,2,Observation period of 365 days,1374
+1374,3,have a high risk surgery ,1374

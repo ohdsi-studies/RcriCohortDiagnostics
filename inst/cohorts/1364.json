@@ -18916,7 +18916,7 @@
 		},
 		{
 			"id" : 31,
-			"name" : "Radical hysterectomy is surgery to remove the uterus, cervix and part of the vagina",
+			"name" : "Radical hysterectomy",
 			"expression" : {
 				"items" : [
 					{
@@ -19060,7 +19060,7 @@
 		},
 		{
 			"id" : 32,
-			"name" : "Hysterectomy is surgery to remove the uterus and usually the cervix",
+			"name" : "Hysterectomy",
 			"expression" : {
 				"items" : [
 					{
@@ -19204,7 +19204,7 @@
 		},
 		{
 			"id" : 33,
-			"name" : "Radical prostatectomy is surgery to remove entire prostate gland and surrounding tissue ",
+			"name" : "Radical prostatectomy",
 			"expression" : {
 				"items" : [
 					{
@@ -19348,7 +19348,7 @@
 		},
 		{
 			"id" : 34,
-			"name" : "Transurethral prostatectomy to remove overgrowth of prostate tissue",
+			"name" : "Transurethral prostatectomy",
 			"expression" : {
 				"items" : [
 					{
