@@ -12045,8 +12045,8 @@
 			}
 		},
 		{
-			"id" : 77,
-			"name" : "[RCRI covariate] High risk Sgx (JAMA sgx)",
+			"id" : 78,
+			"name" : "[RCRI] High risk Updated",
 			"expression" : {
 				"items" : [
 					{
@@ -12064,6 +12064,91 @@
 						},
 						"isExcluded" : false,
 						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002187,
+							"CONCEPT_NAME" : "Aorta-iliac-femoral bypass",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.25",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36910955,
+							"CONCEPT_NAME" : "Aorta-iliac-femoral bypass",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.25",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002186,
+							"CONCEPT_NAME" : "Aorta-renal bypass",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.24",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36916555,
+							"CONCEPT_NAME" : "Aorta-renal bypass",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.24",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4198190,
+							"CONCEPT_NAME" : "Appendectomy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "80146002",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
 						"includeMapped" : false
 					},
 					{
@@ -12126,6 +12211,23 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "73761001",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4063540,
+							"CONCEPT_NAME" : "Creation of connection from ventricle of brain",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "171510000",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
@@ -12204,6 +12306,159 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 2002031,
+							"CONCEPT_NAME" : "Endarterectomy, abdominal arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.16",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36907321,
+							"CONCEPT_NAME" : "Endarterectomy, abdominal arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.16",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36910130,
+							"CONCEPT_NAME" : "Endarterectomy, aorta",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.14",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002029,
+							"CONCEPT_NAME" : "Endarterectomy, aorta",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.14",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002042,
+							"CONCEPT_NAME" : "Endarterectomy, lower limb arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.18",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36910944,
+							"CONCEPT_NAME" : "Endarterectomy, lower limb arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.18",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36909274,
+							"CONCEPT_NAME" : "Endarterectomy, other thoracic vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.15",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002028,
+							"CONCEPT_NAME" : "Endarterectomy, upper limb vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.13",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36907902,
+							"CONCEPT_NAME" : "Endarterectomy, upper limb vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.13",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4300528,
 							"CONCEPT_NAME" : "Endoscopic excision of lesion of large intestine",
 							"STANDARD_CONCEPT" : "S",
@@ -12233,6 +12488,57 @@
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
 						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36909197,
+							"CONCEPT_NAME" : "Endovascular implantation of graft in thoracic aorta",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.73",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002262,
+							"CONCEPT_NAME" : "Endovascular implantation of graft in thoracic aorta",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.73",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36908896,
+							"CONCEPT_NAME" : "Endovascular implantation of other graft in abdominal aorta",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.71",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
@@ -12285,6 +12591,40 @@
 						},
 						"isExcluded" : false,
 						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4080965,
+							"CONCEPT_NAME" : "Extracorporeal circulation procedure",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "182744004",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36911470,
+							"CONCEPT_NAME" : "Extracranial-intracranial (EC-IC) vascular bypass",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.28",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
 						"includeMapped" : false
 					},
 					{
@@ -12408,6 +12748,210 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 2002020,
+							"CONCEPT_NAME" : "Incision of vessel, abdominal arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.06",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36904318,
+							"CONCEPT_NAME" : "Incision of vessel, abdominal arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.06",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002021,
+							"CONCEPT_NAME" : "Incision of vessel, abdominal veins",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.07",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36916803,
+							"CONCEPT_NAME" : "Incision of vessel, abdominal veins",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.07",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36913720,
+							"CONCEPT_NAME" : "Incision of vessel, aorta",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.04",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002018,
+							"CONCEPT_NAME" : "Incision of vessel, aorta",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.04",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002015,
+							"CONCEPT_NAME" : "Incision of vessel, intracranial vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.01",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36906739,
+							"CONCEPT_NAME" : "Incision of vessel, intracranial vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.01",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002023,
+							"CONCEPT_NAME" : "Incision of vessel, lower limb veins",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.09",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36906743,
+							"CONCEPT_NAME" : "Incision of vessel, lower limb veins",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.09",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36904863,
+							"CONCEPT_NAME" : "Incision of vessel, other thoracic vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.05",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36910103,
+							"CONCEPT_NAME" : "Incision of vessel, other vessels of head and neck",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.02",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4244411,
 							"CONCEPT_NAME" : "Internal drainage of pancreatic cyst",
 							"STANDARD_CONCEPT" : "S",
@@ -12437,7 +12981,7 @@
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
 						"isExcluded" : false,
-						"includeDescendants" : true,
+						"includeDescendants" : false,
 						"includeMapped" : false
 					},
 					{
@@ -12527,6 +13071,23 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 4094240,
+							"CONCEPT_NAME" : "Open heart surgery",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "2598006",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4097064,
 							"CONCEPT_NAME" : "Operation on bronchus",
 							"STANDARD_CONCEPT" : "S",
@@ -12544,6 +13105,295 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 4275564,
+							"CONCEPT_NAME" : "Operation on heart",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "64915003",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4101252,
+							"CONCEPT_NAME" : "Operation on vessels of heart",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "27755001",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36909279,
+							"CONCEPT_NAME" : "Other (peripheral) vascular shunt or bypass",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.29",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36913706,
+							"CONCEPT_NAME" : "Other excision of vessels, abdominal arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.66",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36912483,
+							"CONCEPT_NAME" : "Other excision of vessels, abdominal veins",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.67",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36915039,
+							"CONCEPT_NAME" : "Other excision of vessels, aorta, abdominal",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.64",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36914541,
+							"CONCEPT_NAME" : "Other excision of vessels, lower limb arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.68",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36907135,
+							"CONCEPT_NAME" : "Other excision of vessels, thoracic vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.65",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36909133,
+							"CONCEPT_NAME" : "Other intra-abdominal vascular shunt or bypass",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.26",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36915318,
+							"CONCEPT_NAME" : "Other operations on vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.99",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36906582,
+							"CONCEPT_NAME" : "Other repair of aneurysm",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.52",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36916999,
+							"CONCEPT_NAME" : "Other repair of vessel",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.59",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36909440,
+							"CONCEPT_NAME" : "Other revision of vascular procedure",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.49",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36903704,
+							"CONCEPT_NAME" : "Other surgical occlusion of vessels, aorta, abdominal",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.84",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36905289,
+							"CONCEPT_NAME" : "Other surgical occlusion of vessels, intracranial vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.81",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36908181,
+							"CONCEPT_NAME" : "Other surgical occlusion of vessels, other vessels of head and neck",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.82",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36917021,
+							"CONCEPT_NAME" : "Other surgical occlusion of vessels, thoracic vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.85",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4010266,
 							"CONCEPT_NAME" : "Partial cystectomy",
 							"STANDARD_CONCEPT" : "S",
@@ -12556,6 +13406,40 @@
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
 						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4143728,
+							"CONCEPT_NAME" : "Percutaneous tracheostomy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "307007002",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4065590,
+							"CONCEPT_NAME" : "Permanent tracheostomy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "21619009",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
@@ -12595,6 +13479,23 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 4043174,
+							"CONCEPT_NAME" : "Procedure on coronary arteries",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "118806004",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4042673,
 							"CONCEPT_NAME" : "Procedure on heart",
 							"STANDARD_CONCEPT" : "S",
@@ -12602,6 +13503,23 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "118797008",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4053719,
+							"CONCEPT_NAME" : "Puncture of vessel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "242051000",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
@@ -12629,6 +13547,23 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 4146536,
+							"CONCEPT_NAME" : "Renal dialysis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "265764009",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4327488,
 							"CONCEPT_NAME" : "Repair of aneurysm",
 							"STANDARD_CONCEPT" : "S",
@@ -12641,6 +13576,23 @@
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
 						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4184652,
+							"CONCEPT_NAME" : "Repair of aneurysm by endovascular coil embolization",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "43785003",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
@@ -12673,6 +13625,91 @@
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002229,
+							"CONCEPT_NAME" : "Repair of blood vessel with synthetic patch graft",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.57",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36906282,
+							"CONCEPT_NAME" : "Repair of blood vessel with synthetic patch graft",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.57",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36909851,
+							"CONCEPT_NAME" : "Repair of blood vessel with tissue patch graft",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.56",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36908315,
+							"CONCEPT_NAME" : "Repair of blood vessel with unspecified type of patch graft",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.58",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002230,
+							"CONCEPT_NAME" : "Repair of blood vessel with unspecified type of patch graft",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "39.58",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
 						},
 						"isExcluded" : false,
 						"includeDescendants" : true,
@@ -12765,6 +13802,295 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 2002065,
+							"CONCEPT_NAME" : "Resection of vessel with anastomosis, abdominal arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.36",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36912929,
+							"CONCEPT_NAME" : "Resection of vessel with anastomosis, abdominal arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.36",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002063,
+							"CONCEPT_NAME" : "Resection of vessel with anastomosis, aorta",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.34",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36912059,
+							"CONCEPT_NAME" : "Resection of vessel with anastomosis, aorta",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.34",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002067,
+							"CONCEPT_NAME" : "Resection of vessel with anastomosis, lower limb arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.38",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36910870,
+							"CONCEPT_NAME" : "Resection of vessel with anastomosis, lower limb arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.38",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36910315,
+							"CONCEPT_NAME" : "Resection of vessel with anastomosis, other thoracic vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.35",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36909011,
+							"CONCEPT_NAME" : "Resection of vessel with anastomosis, upper limb vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.33",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36914662,
+							"CONCEPT_NAME" : "Resection of vessel with replacement, abdominal arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.46",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002086,
+							"CONCEPT_NAME" : "Resection of vessel with replacement, abdominal arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.46",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36909221,
+							"CONCEPT_NAME" : "Resection of vessel with replacement, aorta, abdominal",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.44",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002084,
+							"CONCEPT_NAME" : "Resection of vessel with replacement, aorta, abdominal",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.44",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36908342,
+							"CONCEPT_NAME" : "Resection of vessel with replacement, intracranial vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.41",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36911487,
+							"CONCEPT_NAME" : "Resection of vessel with replacement, lower limb arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.48",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002088,
+							"CONCEPT_NAME" : "Resection of vessel with replacement, lower limb arteries",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.48",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36913017,
+							"CONCEPT_NAME" : "Resection of vessel with replacement, other vessels of head and neck",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.42",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36915101,
+							"CONCEPT_NAME" : "Resection of vessel with replacement, thoracic vessels",
+							"STANDARD_CONCEPT" : "N",
+							"STANDARD_CONCEPT_CAPTION" : "Non-Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38.45",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9ProcCN",
+							"CONCEPT_CLASS_ID" : "4-dig nonbill code"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4168926,
 							"CONCEPT_NAME" : "Revision of anastomosis of large intestine",
 							"STANDARD_CONCEPT" : "S",
@@ -12850,6 +14176,23 @@
 					},
 					{
 						"concept" : {
+							"CONCEPT_ID" : 2107774,
+							"CONCEPT_NAME" : "Thromboendarterectomy, including patch graft, if performed; common femoral",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "35371",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "CPT4",
+							"CONCEPT_CLASS_ID" : "CPT4"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
 							"CONCEPT_ID" : 4029954,
 							"CONCEPT_NAME" : "Total esophagectomy",
 							"STANDARD_CONCEPT" : "S",
@@ -12861,8 +14204,8 @@
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
+						"isExcluded" : true,
+						"includeDescendants" : false,
 						"includeMapped" : false
 					},
 					{
@@ -12947,6 +14290,40 @@
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
 						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4271587,
+							"CONCEPT_NAME" : "Ventriculostomy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "63933000",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 2002965,
+							"CONCEPT_NAME" : "[Endoscopic] polypectomy of rectum",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "48.36",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "ICD9Proc",
+							"CONCEPT_CLASS_ID" : "4-dig billing code"
+						},
+						"isExcluded" : true,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					}
@@ -13111,7 +14488,7 @@
 					{
 						"Criteria" : {
 							"ProcedureOccurrence" : {
-								"CodesetId" : 77,
+								"CodesetId" : 78,
 								"ProcedureTypeExclude" : false
 							}
 						},

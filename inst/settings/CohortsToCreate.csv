@@ -9,8 +9,8 @@
 0,1362,1362,[PCE covariate] Type 2 diabetes mellitus,1362,,1362
 0,1367,1367,[RCRI] Composite surgery 001 (combination of several major surgery) during inpatient stay (Prior to design diagnostics),1367,,1367
 0,1373,1373,[RCRI] Composite surgery 003 (combination of several major surgery) during inpatient stay (After 1 design diagnostics and 1 data diagnostics),1373,,1373
-0,1293,1293,[RCRI covariate] Ischemic heart disease,1293,,1293
 0,1374,1374,[RCRI] High Risk Surgery Covariate Cohort,1374,,1374
+0,1293,1293,[RCRI covariate] Ischemic heart disease,1293,,1293
 0,1414,1414,[RCRI] Cerebrovascular Surgery during inpatient stay,1414,,1414
 0,1415,1415,[RCRI] Peripheral Vascular - Lower limb arterial bypass during inpatient stay,1415,,1415
 0,1416,1416,[RCRI] Above Knee Amputation during inpatient stay,1416,,1416

@@ -39,3 +39,4 @@ vignettes/*.pdf
 .Renviron
 extras/CodeToRunPrivate.R
 errorReportSql.txt
+.Rproj.user
